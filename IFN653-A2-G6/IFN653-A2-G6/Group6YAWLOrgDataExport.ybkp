@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orgdata>
+  <participants>
+    <participant id="PA-6be0eead-0c9b-43c2-a345-378554adb1e3">
+      <userid>LB1</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Lily</firstname>
+      <lastname>Bose</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-c6e5eba9-8948-452e-aba6-a8736967cf0c</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-861959ca-7542-4013-9ccb-a059b7520c44">
+      <userid>ISR2</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Issie</firstname>
+      <lastname>Imu</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-558d7c98-29c1-4287-9d0d-9e89c4a8f4c6</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-15a5aef6-81ae-47d1-8fc7-2f51bd6247cf">
+      <userid>LB2</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Lia</firstname>
+      <lastname>Burns</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-c6e5eba9-8948-452e-aba6-a8736967cf0c</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-910ac5e4-6871-4a11-9df2-d0adb70cad8b">
+      <userid>FO2</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Fiona</firstname>
+      <lastname>Finn</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-8d914ca7-0543-42ef-b9b4-fea1aeaeab7e</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-d89aa9ab-0a67-4f83-b072-e86085f6a3fe">
+      <userid>LA2</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Latchan</firstname>
+      <lastname>Amritsar</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-c7f3a3cb-96a0-4e40-976b-d50251deedfc</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-9e783cb9-ba25-47e0-8d42-bb9369fe21f2">
+      <userid>PV1</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Pipi</firstname>
+      <lastname>Parkinson</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-24fcdd6c-7543-4dbc-bfcc-3a696082505c</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-ee048e5f-a11e-4dc9-9f6b-217abdc748f4">
+      <userid>PV2</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Priyanka</firstname>
+      <lastname>Patel</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-24fcdd6c-7543-4dbc-bfcc-3a696082505c</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-6b5c72c9-b763-496c-adda-395591f6664d">
+      <userid>LA1</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Louis</firstname>
+      <lastname>Armstrong</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-c7f3a3cb-96a0-4e40-976b-d50251deedfc</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-20b76c6f-26ae-45e4-a399-f50ea6f56da7">
+      <userid>ISR1</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Ingrid</firstname>
+      <lastname>Ijla</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>false</isAdministrator>
+      <roles>
+        <role>RO-558d7c98-29c1-4287-9d0d-9e89c4a8f4c6</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+    <participant id="PA-225c0cfc-542a-409f-b9a4-2b05f2e245ee">
+      <userid>FO1</userid>
+      <password>7w67t3KY4fvYH3VqTvw1uXfJPa4=</password>
+      <firstname>Frances</firstname>
+      <lastname>Fig</lastname>
+      <description/>
+      <notes/>
+      <isAdministrator>true</isAdministrator>
+      <roles>
+        <role>RO-8d914ca7-0543-42ef-b9b4-fea1aeaeab7e</role>
+      </roles>
+      <positions/>
+      <capabilities/>
+      <privileges>00000000</privileges>
+    </participant>
+  </participants>
+  <roles>
+    <role id="RO-8d914ca7-0543-42ef-b9b4-fea1aeaeab7e">
+      <name>Financial Officer</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-558d7c98-29c1-4287-9d0d-9e89c4a8f4c6">
+      <name>Insurance Sales Representative</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-c6e5eba9-8948-452e-aba6-a8736967cf0c">
+      <name>Loans Assessor</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-c7f3a3cb-96a0-4e40-976b-d50251deedfc">
+      <name>Loans Assistant</name>
+      <description/>
+      <notes/>
+    </role>
+    <role id="RO-24fcdd6c-7543-4dbc-bfcc-3a696082505c">
+      <name>Property Valuer</name>
+      <description/>
+      <notes/>
+    </role>
+  </roles>
+  <positions/>
+  <capabilities/>
+  <orggroups/>
+  <nonhumanresources/>
+  <nonhumancategories/>
+</orgdata>
+

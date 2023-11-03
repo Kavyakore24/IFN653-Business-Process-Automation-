@@ -1,0 +1,201 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <!-- enumeration -->
+  <xs:simpleType name="Status">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="incomplete" />
+      <xs:enumeration value="complete" />
+      <xs:enumeration value="assessed" />
+      <xs:enumeration value="rejected" />
+      <xs:enumeration value="cancelled" />
+      <xs:enumeration value="approved" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="CreditAssessment">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AAA" />
+      <xs:enumeration value="AA" />
+      <xs:enumeration value="A" />
+      <xs:enumeration value="BBB" />
+      <xs:enumeration value="BB" />
+      <xs:enumeration value="B" />
+      <xs:enumeration value="unrated" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Completeness">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="complete" />
+      <xs:enumeration value="incomplete" />
+    </xs:restriction>
+  </xs:simpleType>
+  <!-- -->
+  <xs:complexType name="ApplicantInfoType">
+    <xs:sequence>
+      <xs:element name="Title" type="xs:string" />
+      <xs:element name="LastName" type="xs:string" />
+      <xs:element name="FirstName" type="xs:string" minOccurs="0" maxOccurs="5" />
+      <xs:element name="CurrentAddress" type="AddressType" />
+      <xs:element name="DateOfBirth" type="xs:date" />
+      <xs:element name="PreviousAddress" type="AddressType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="FinancialInformation" type="FinancialInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddressType">
+    <xs:sequence>
+      <xs:element name="StreetNumber" type="xs:integer" />
+      <xs:element name="StreetName" type="xs:string" />
+      <xs:element name="City" type="xs:string" />
+      <xs:element name="Postcode" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FinancialInfoType">
+    <xs:sequence>
+      <xs:element name="CurrentEmployer" type="xs:string" />
+      <xs:element name="MonthlyNetSalary" type="xs:decimal" />
+      <xs:element name="OtherIncome" type="OtherIncomeType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="MonthlyOutgoings" type="xs:decimal" />
+      <xs:element name="BankAccounts" type="BankAccountType" minOccurs="1" maxOccurs="unbounded" />
+      <xs:element name="CurrentCustomer" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OtherIncomeType">
+    <xs:sequence>
+      <xs:element name="Type" type="xs:string" />
+      <xs:element name="MonthlyNetIncome" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BankAccountType">
+    <xs:sequence>
+      <xs:element name="BankName" type="xs:string" />
+      <xs:element name="AccountType" type="xs:string" />
+      <xs:element name="AccountNumber" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PropertyInfoType">
+    <xs:sequence>
+      <xs:element name="PropertyType" type="xs:string" />
+      <xs:element name="Address" type="AddressType" />
+      <xs:element name="PurchasePrice" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoanInfoType">
+    <xs:sequence>
+      <xs:element name="LoanAmount" type="xs:decimal" />
+      <xs:element name="NumberYears" type="xs:integer" />
+      <xs:element name="StartDate" type="xs:date" />
+      <xs:element name="AnnualInterestRate" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdminInfoType">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="SubmissionDate" type="xs:dateTime" />
+      <xs:element name="RevisionDate" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="Status" type="Status" />
+      <xs:element name="Comments" type="xs:string" minOccurs="0" />
+      <xs:element name="Eligibility" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreditHistoryReport">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="LoanApplications" type="LoanApplicationsType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="CreditCardInformation" type="CreditCardInfoType" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="PublicRecordInformation" type="PublicRecordInfoType" minOccurs="0" />
+      <xs:element name="CreditAssessment" type="CreditAssessment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoanApplicationsType">
+    <xs:sequence>
+      <xs:element name="LoanType" type="xs:string" />
+      <xs:element name="Amount" type="xs:decimal" />
+      <xs:element name="Duration" type="xs:integer" />
+      <xs:element name="InterestRate" type="xs:decimal" />
+      <xs:element name="OutstandingAmount" type="xs:decimal" />
+      <xs:element name="MonthlyRepayments" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreditCardInfoType">
+    <xs:sequence>
+      <xs:element name="Provider" type="xs:string" />
+      <xs:element name="OutstandingAmount" type="xs:decimal" />
+      <xs:element name="CreditLimit" type="xs:decimal" />
+      <xs:element name="InterestRate" type="xs:decimal" />
+      <xs:element name="MonthlyRepayments" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PublicRecordInfoType">
+    <xs:sequence>
+      <xs:element name="OutstandingJudgements" type="xs:integer" />
+      <xs:element name="BankruptcyInformation" type="BankruptcyInfoType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="BankruptcyInfoType">
+    <xs:sequence>
+      <xs:element name="DateRaised" type="xs:date" />
+      <xs:element name="Current" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RiskAssessment">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="RiskWeight" type="xs:integer" />
+      <xs:element name="RulesApplied" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PropertyAppraisalReport">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="AveragePropertyValue" type="xs:decimal" />
+      <xs:element name="EstimatedMarketValue" type="xs:decimal" />
+      <xs:element name="Comments" type="xs:string" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RepaymentAgreement">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="MonthlyRepaymentAmount" type="xs:decimal" />
+      <xs:element name="NumberRepayments" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HomeInsuranceQuote">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="SalesRepresentativeName" type="xs:string" />
+      <xs:element name="HomeInsAnnualCost" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LifeInsuranceQuote">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="SalesRepresentativeName" type="xs:string" />
+      <xs:element name="LifeInsAnnualCost" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreditCardQuote">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="FinanceOfficersName" type="xs:string" />
+      <xs:element name="CardLimit" type="xs:decimal" />
+      <xs:element name="RegularInterestRate" type="xs:decimal" />
+      <xs:element name="DiscountedInterestRate" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AgreementSummary">
+    <xs:sequence>
+      <xs:element name="LoanApplicationIdentifier" type="xs:string" />
+      <xs:element name="ConditionsAgreed" type="xs:boolean" />
+      <xs:element name="RepaymentAgreed" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoanApplication">
+    <xs:sequence>
+      <xs:element name="ApplicantInformation" type="ApplicantInfoType" />
+      <xs:element name="PropertyInformation" type="PropertyInfoType" />
+      <xs:element name="LoanInformation" type="LoanInfoType" />
+      <xs:element name="HomeInsuranceQuote" type="xs:boolean" />
+      <xs:element name="LifeInsuranceQuote" type="xs:boolean" />
+      <xs:element name="NewCreditCardQuote" type="xs:boolean" />
+      <xs:element name="AdministrationInformation" type="AdminInfoType" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
